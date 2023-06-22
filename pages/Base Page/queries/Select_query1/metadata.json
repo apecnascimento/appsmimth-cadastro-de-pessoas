@@ -13,9 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "clientes",
+    "pageId": "Base Page",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "SELECT\n  *\nFROM\n  public.pessoas\nWHERE\n  \"nome\" ilike '%{{Table1.searchText}}%'\nORDER BY\n  \"{{Table1.sortOrder.column || 'pessoa_id'}}\" {{Table1.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}\nLIMIT\n  {{Table1.pageSize}}\nOFFSET\n  {{Table1.pageOffset}}",
@@ -26,7 +25,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -46,9 +45,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-06-22T15:14:30Z"
+    "createdAt": "2023-06-22T15:43:58Z"
   },
-  "id": "clientes_Select_query1",
+  "id": "Base Page_Select_query1",
   "deleted": false,
-  "gitSyncId": "64944c552f52da349859d8d7_64946556f02c534fadae9562"
+  "gitSyncId": "64944c552f52da349859d8d7_64946c3ef02c534fadae95de"
 }

@@ -13,9 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "clientes",
+    "pageId": "Base Page",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "INSERT INTO public.pessoas (\"pessoa_id\",\"nome\",\"idade\") VALUES ('{{(Table1.newRow || {}).pessoa_id}}','{{(Table1.newRow || {}).nome}}','{{(Table1.newRow || {}).idade}}')",
@@ -45,7 +44,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "clientes_Insert_query1",
+  "id": "Base Page_Insert_query1",
   "deleted": false,
-  "gitSyncId": "64944c552f52da349859d8d7_64946558f02c534fadae9568"
+  "gitSyncId": "64944c552f52da349859d8d7_64946c3ff02c534fadae95e2"
 }

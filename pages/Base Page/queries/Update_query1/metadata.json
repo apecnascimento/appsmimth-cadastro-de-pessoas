@@ -13,9 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "clientes",
+    "pageId": "Base Page",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "UPDATE public.pessoas SET \"pessoa_id\"= '{{Table1.updatedRow.pessoa_id}}', \"nome\"= '{{Table1.updatedRow.nome}}', \"idade\"= '{{Table1.updatedRow.idade}}' WHERE \"pessoa_id\"= {{Table1.updatedRow.pessoa_id}};",
@@ -45,7 +44,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "clientes_Update_query1",
+  "id": "Base Page_Update_query1",
   "deleted": false,
-  "gitSyncId": "64944c552f52da349859d8d7_64946557f02c534fadae9566"
+  "gitSyncId": "64944c552f52da349859d8d7_64946c3ff02c534fadae95e3"
 }
