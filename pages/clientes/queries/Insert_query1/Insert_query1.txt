@@ -1,0 +1,1 @@
+INSERT INTO public.pessoas ("pessoa_id","nome","idade") VALUES ('{{(Table1.newRow || {}).pessoa_id}}','{{(Table1.newRow || {}).nome}}','{{(Table1.newRow || {}).idade}}')
