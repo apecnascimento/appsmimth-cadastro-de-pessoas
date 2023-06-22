@@ -1,0 +1,14 @@
+SELECT
+  pessoa_id,
+  nome, 
+	idade
+FROM
+  public.pessoas
+WHERE
+  "nome" ilike '%{{PessoasTable.searchText}}%'
+ORDER BY
+  "{{PessoasTable.sortOrder.column || 'pessoa_id'}}" {{PessoasTable.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{PessoasTable.pageSize}}
+OFFSET
+  {{PessoasTable.pageOffset}}

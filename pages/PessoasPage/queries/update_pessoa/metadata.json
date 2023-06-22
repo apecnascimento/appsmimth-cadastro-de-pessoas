@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Update_query1",
+    "name": "update_pessoa",
     "datasource": {
       "name": " Clientes",
       "pluginId": "postgres-plugin",
@@ -13,11 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Base Page",
+    "pageId": "PessoasPage",
     "actionConfiguration": {
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE public.pessoas SET \"pessoa_id\"= '{{Table1.updatedRow.pessoa_id}}', \"nome\"= '{{Table1.updatedRow.nome}}', \"idade\"= '{{Table1.updatedRow.idade}}' WHERE \"pessoa_id\"= {{Table1.updatedRow.pessoa_id}};",
+      "body": "UPDATE public.pessoas SET \"pessoa_id\"= '{{PessoasTable.updatedRow.pessoa_id}}', \"nome\"= '{{PessoasTable.updatedRow.nome}}', \"idade\"= '{{PessoasTable.updatedRow.idade}}' WHERE \"pessoa_id\"= {{PessoasTable.updatedRow.pessoa_id}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -35,16 +36,17 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Table1.updatedRow.idade",
-      "Table1.updatedRow.nome",
-      "Table1.updatedRow.pessoa_id"
+      "PessoasTable.updatedRow.idade",
+      "PessoasTable.updatedRow.nome",
+      "PessoasTable.updatedRow.pessoa_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-06-22T15:46:20Z"
   },
-  "id": "Base Page_Update_query1",
+  "id": "PessoasPage_update_pessoa",
   "deleted": false,
-  "gitSyncId": "64944c552f52da349859d8d7_64946c3ff02c534fadae95e3"
+  "gitSyncId": "64944c552f52da349859d8d7_64946cccf02c534fadae95ed"
 }

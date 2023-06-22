@@ -1,0 +1,1 @@
+UPDATE public.pessoas SET "pessoa_id"= '{{PessoasTable.updatedRow.pessoa_id}}', "nome"= '{{PessoasTable.updatedRow.nome}}', "idade"= '{{PessoasTable.updatedRow.idade}}' WHERE "pessoa_id"= {{PessoasTable.updatedRow.pessoa_id}};

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Insert_query1",
+    "name": "Total_record_query1",
     "datasource": {
       "name": " Clientes",
       "pluginId": "postgres-plugin",
@@ -13,11 +13,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Base Page",
+    "pageId": "AddPessoa",
     "actionConfiguration": {
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO public.pessoas (\"pessoa_id\",\"nome\",\"idade\") VALUES ('{{(Table1.newRow || {}).pessoa_id}}','{{(Table1.newRow || {}).nome}}','{{(Table1.newRow || {}).idade}}')",
+      "body": "SELECT COUNT(*) from public.pessoas where nome ilike '%{{Table1.searchText}}%';",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -35,16 +35,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(Table1.newRow || {}).idade",
-      "(Table1.newRow || {}).nome",
-      "(Table1.newRow || {}).pessoa_id"
+      "Table1.searchText"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-06-22T15:43:58Z"
   },
-  "id": "Base Page_Insert_query1",
+  "id": "AddPessoa_Total_record_query1",
   "deleted": false,
-  "gitSyncId": "64944c552f52da349859d8d7_64946c3ff02c534fadae95e2"
+  "gitSyncId": "64944c552f52da349859d8d7_649476e0f02c534fadae960a"
 }

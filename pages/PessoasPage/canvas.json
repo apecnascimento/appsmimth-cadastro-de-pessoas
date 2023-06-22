@@ -1,0 +1,381 @@
+{
+  "unpublishedPage": {
+    "name": "PessoasPage",
+    "slug": "pessoaspage",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 680,
+          "containerStyle": "none",
+          "snapRows": 78,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 80,
+          "minHeight": 800,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "mobileBottomRow": 26,
+              "widgetName": "ContantConainer",
+              "borderColor": "#E0DEDE",
+              "isCanvas": true,
+              "displayName": "Container",
+              "iconSVG": "/static/media/icon.c47c069fe28eb6d2d27f0fffdc053074.svg",
+              "searchTags": [
+                "div",
+                "parent",
+                "group"
+              ],
+              "topRow": 16,
+              "bottomRow": 68,
+              "parentRowSpace": 10,
+              "type": "CONTAINER_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": false,
+              "mobileRightColumn": 25,
+              "animateLoading": true,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 1,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                }
+              ],
+              "children": [
+                {
+                  "mobileBottomRow": 100,
+                  "widgetName": "Canvas2",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 520,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 100,
+                  "mobileRightColumn": 475.5,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "borderColor": "#E0DEDE",
+                      "onSort": "{{\n            Select_query2.run();\n            Total_record_query2.run();\n          }}",
+                      "isVisibleDownload": false,
+                      "iconSVG": "/static/media/icon.24905525921dd6f5ff46d0dd843b9e12.svg",
+                      "topRow": 0,
+                      "isSortable": true,
+                      "onPageChange": "{{select_pessoas.run()\nTotal_record_query2.run();}}",
+                      "type": "TABLE_WIDGET_V2",
+                      "inlineEditingSaveOption": "ROW_LEVEL",
+                      "animateLoading": true,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "totalRecordsCount"
+                        },
+                        {
+                          "key": "primaryColumns.pessoa_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.nome.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.idade.computedValue"
+                        }
+                      ],
+                      "needsHeightForContent": true,
+                      "leftColumn": 0,
+                      "delimiter": ",",
+                      "defaultSelectedRowIndex": 0,
+                      "showInlineEditingOptionDropdown": true,
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": true,
+                      "isVisible": true,
+                      "enableClientSideSearch": false,
+                      "version": 2,
+                      "totalRecordsCount": "{{pessoa_total_record.data[0].count}}",
+                      "isLoading": false,
+                      "onSearchTextChanged": "{{\n            Select_query2.run();\n            Total_record_query2.run();\n          }}",
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "editActions": {
+                          "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                        }
+                      },
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "columnUpdatedAt": 1687451165428,
+                      "primaryColumnId": "pessoa_id",
+                      "defaultSelectedRowIndices": [
+                        0
+                      ],
+                      "mobileBottomRow": 28,
+                      "widgetName": "PessoasTable",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "pessoa_id",
+                        "nome",
+                        "idade"
+                      ],
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Table",
+                      "bottomRow": 48,
+                      "columnWidthMap": {},
+                      "parentRowSpace": 10,
+                      "hideCard": false,
+                      "onAddNewRowSave": "{{Insert_query2.run(() => {\n            showAlert(\"Successfully created!\");\n            Select_query2.run()\n          }, () => {\n            showAlert(\"Unable to create!\");\n          })}}",
+                      "mobileRightColumn": 34,
+                      "parentColumnSpace": 18.880859375,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onPageChange"
+                        },
+                        {
+                          "key": "onSearchTextChanged"
+                        },
+                        {
+                          "key": "onSort"
+                        },
+                        {
+                          "key": "onAddNewRowSave"
+                        }
+                      ],
+                      "borderWidth": "1",
+                      "primaryColumns": {
+                        "pessoa_id": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "pessoa_id",
+                          "id": "pessoa_id",
+                          "alias": "pessoa_id",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "pessoa_id",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{PessoasTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"pessoa_id\"]))}}",
+                          "sticky": "",
+                          "validation": {}
+                        },
+                        "nome": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 1,
+                          "width": 150,
+                          "originalId": "nome",
+                          "id": "nome",
+                          "alias": "nome",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "nome",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{PessoasTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nome\"]))}}",
+                          "sticky": "",
+                          "validation": {}
+                        },
+                        "idade": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 2,
+                          "width": 150,
+                          "originalId": "idade",
+                          "id": "idade",
+                          "alias": "idade",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "idade",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{PessoasTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idade\"]))}}",
+                          "sticky": "",
+                          "validation": {}
+                        }
+                      },
+                      "key": "08ty83que5",
+                      "canFreezeColumn": true,
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "textSize": "0.875rem",
+                      "widgetId": "g70soifqi0",
+                      "allowAddNewRow": false,
+                      "minWidth": 450,
+                      "tableData": "{{select_pessoas.data}}",
+                      "label": "Data",
+                      "searchKey": "",
+                      "parentId": "p2a0kuc42e",
+                      "serverSidePaginationEnabled": true,
+                      "renderMode": "CANVAS",
+                      "mobileTopRow": 0,
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "responsiveBehavior": "fill",
+                      "mobileLeftColumn": 0,
+                      "isVisiblePagination": true,
+                      "verticalAlignment": "CENTER"
+                    }
+                  ],
+                  "key": "7f1j3s3ux9",
+                  "isDeprecated": false,
+                  "rightColumn": 475.5,
+                  "detachFromLayout": true,
+                  "widgetId": "p2a0kuc42e",
+                  "containerStyle": "none",
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "v1za24qxe6",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 0,
+                  "responsiveBehavior": "fill",
+                  "mobileLeftColumn": 0,
+                  "flexLayers": []
+                }
+              ],
+              "borderWidth": "1",
+              "flexVerticalAlignment": "start",
+              "key": "eo9qyl0dy5",
+              "backgroundColor": "#FFFFFF",
+              "isDeprecated": false,
+              "rightColumn": 63,
+              "dynamicHeight": "FIXED",
+              "widgetId": "v1za24qxe6",
+              "containerStyle": "card",
+              "minWidth": 450,
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "mobileTopRow": 16,
+              "responsiveBehavior": "fill",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "mobileLeftColumn": 1,
+              "maxDynamicHeight": 9000,
+              "minDynamicHeight": 10
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "PessoasPage_select_pessoas",
+              "name": "select_pessoas",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "PessoasTable.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"",
+                "PessoasTable.pageSize",
+                "PessoasTable.searchText",
+                "PessoasTable.pageOffset",
+                "PessoasTable.sortOrder.column || 'pessoa_id'"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "PessoasPage_pessoa_total_record",
+              "name": "pessoa_total_record",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "PessoasTable.searchText"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "PessoasPage",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "64944c552f52da349859d8d7_64946ccbf02c534fadae95e7"
+}
